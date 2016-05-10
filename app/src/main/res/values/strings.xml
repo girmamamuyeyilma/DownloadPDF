@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DownloadPDF</string>
+    <string name="action_open">Complete action using</string>
+    <string name="download_mesage">Download</string>
+    <string name="download_mesage_progress">Download in progress</string>
+    <string name="download_complete_mesage">Download complete</string>
+</resources>
