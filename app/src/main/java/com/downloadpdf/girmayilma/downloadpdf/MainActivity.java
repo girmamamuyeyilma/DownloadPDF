@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mBuilder.setContentTitle(getString(R.string.download_mesage))
                 .setContentText(getString(R.string.download_mesage_progress))
                 .setSmallIcon(R.mipmap.ic_launcher);
-        new DownloadTask().execute(URL_PATH); // start an asynctask to download the pdf
-
+        new DownloadTask().execute(URL_PATH);
     }
 
     private class DownloadTask extends AsyncTask<String, Integer, String> {
