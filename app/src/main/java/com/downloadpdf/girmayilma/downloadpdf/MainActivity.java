@@ -120,9 +120,7 @@ public class MainActivity extends AppCompatActivity {
         if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)
                 || ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-            //  Toast.makeText(MainActivity.this, "Should show request permission reason", Toast.LENGTH_SHORT).show();
-
-            showMessageOKCancel("You need to allow access to file to download pdf", new DialogInterface.OnClickListener() {
+            showMessageOKCancel("You need to allow access to file for using this application", new DialogInterface.OnClickListener() {
 
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -168,20 +166,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             mBuilder.setContentText(getString(R.string.download_complete_mesage));
-
-     /*       Uri path = Uri.parse(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                                         + "/test.pdf"); // find the path for the downloaded pdf
-            File file = new File(path.toString());
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-            browserIntent.setDataAndType(Uri.fromFile(file), "application/pdf");
-            browserIntent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-            Intent intent = Intent.createChooser(browserIntent, getString(R.string.action_open));
-            TaskStackBuilder stackBuilder = TaskStackBuilder.create(getApplicationContext());
-            stackBuilder.addNextIntent(intent);
-            PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
-            mBuilder.setContentIntent(pendingIntent);
-            mBuilder.setProgress(0, 1, false);
-            mNotifyManager.notify(id, mBuilder.build());*/
 
             Uri path = Uri.parse(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                                          + "/test.pdf"); // find the path for the downloaded pdf
