@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static String[] PERMISSIONS_READ_WRITE = { Manifest.permission.READ_EXTERNAL_STORAGE,
                                                        Manifest.permission.WRITE_EXTERNAL_STORAGE };
+
+
     int id = 0;
     private NotificationManager mNotifyManager;
     private Builder mBuilder;
